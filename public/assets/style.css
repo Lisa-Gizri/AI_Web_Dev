@@ -53,32 +53,37 @@ body {
 
     .right {
         flex: 1;
+        padding: 0;
+        /* No extra spacing from edge */
         background-color: #0A1123;
         display: flex;
         flex-direction: column;
-        padding: 2rem 2.5rem;
+        gap: 2rem;
     }
 
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
+    .about-meta {
+        display: flex;
+        justify-content: space-between;
+        background-color: #122138;
+        padding: 2.5rem 3rem;
+        width: 100%;
+        margin: 0;
+        gap: 50px;
     }
 
-    .about-box,
-    .meta-box {
-        margin-bottom: 2rem;
-    }
-
+    /* "About" section paragraph style */
     .about-box p {
         font-size: 14px;
         color: #ffffff;
     }
 
+    /* Meta info styling */
     .meta-box {
+        flex: 1;
         display: flex;
         flex-direction: column;
         gap: 8px;
+        min-width: 250px;
     }
 
     .meta-row {
@@ -119,14 +124,21 @@ body {
         margin-bottom: 10px;
     }
 
-    ul {
-        list-style: none;
-        padding-left: 0;
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding-left: 40px;
     }
 
     .grid ul {
-        margin-bottom: 30px;
-        padding-right: 10px;
+        margin-bottom: 40px;
+        padding-right: 25px;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
     }
 
     li {
