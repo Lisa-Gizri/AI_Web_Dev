@@ -1,3 +1,4 @@
+/* Reset and global styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,6 +12,7 @@ body {
     line-height: 1.6;
 }
 
+/* Layout container */
 .container {
     display: flex;
     flex-direction: column;
@@ -19,11 +21,144 @@ body {
     min-height: 100vh;
 }
 
+/* Media Query for Mobile Layout */
+@media(max-width: 768px) {
+
+    /*LEFT SECTION (IMAGE + NAME/TAGLINE)*/
+    .left {
+        background: url('../assets/images/sarah.png') center/cover no-repeat;
+        min-height: 60vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .left h1 {
+        font-size: 40px;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    .left p {
+        font-size: 18px;
+        font-style: italic;
+        margin-top: 12px;
+    }
+
+    /*RIGHT CONTENT*/
+    .right {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+        background-color: #0a1123;
+    }
+
+    .about-meta {
+        margin-left: -1.5rem;
+        /* remove the left padding from .right */
+        margin-right: -1.5rem;
+        /* remove the right padding from .right */
+        margin-top: -2rem;
+        /* remove the top padding from .right */
+        padding: 2rem;
+        background-color: #122138;
+        width: calc(100% + 3rem);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-box p {
+        font-size: 14px;
+    }
+
+    /* META INFO */
+    .meta-box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .meta-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #3a445e;
+        padding-bottom: 0.4rem;
+        font-size: 13px;
+    }
+
+    .meta-label {
+        font-style: italic;
+        color: #ccc;
+    }
+
+    .meta-value {
+        color: white;
+    }
+
+    .meta-value .dot {
+        width: 12px;
+        height: 12px;
+        background-color: #b9d151;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 4px;
+    }
+
+    /* SECTION TITLES */
+    .section-title {
+        color: #f7941d;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    /* GRID SECTIONS (MOBILE STACKED) */
+    .grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .grid ul {
+        margin-bottom: 30px;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    li {
+        position: relative;
+        padding-left: 1.2em;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    li::before {
+        content: '●';
+        position: absolute;
+        left: 0;
+        color: #b9d151;
+        font-size: 14px;
+        top: 0.1em;
+    }
+}
+
+/* Media Query for Desktop Layout */
 @media(min-width: 768px) {
     .container {
         flex-direction: row;
     }
 
+    /* Left image section */
     .left {
         flex: 1;
         background: url('../assets/images/sarah.png') center/cover no-repeat;
@@ -51,6 +186,7 @@ body {
         margin-top: 20px;
     }
 
+    /* Right content section */
     .right {
         flex: 1;
         padding: 0;
@@ -116,6 +252,7 @@ body {
         margin-left: 4px;
     }
 
+    /* Section headers */
     .section-title {
         color: #F7941D;
         font-weight: 500;
@@ -124,6 +261,7 @@ body {
         margin-bottom: 10px;
     }
 
+    /* Two-column grid */
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
