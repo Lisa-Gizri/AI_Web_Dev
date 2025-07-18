@@ -1,0 +1,82 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background-color: #0e1a2b;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media(min-width: 768px) {
+      .container {
+        flex-direction: row;
+      }
+    }
+
+    .left {
+      flex: 1;
+      background: url('persona-image.jpg') center/cover no-repeat;
+      min-height: 600px;
+      display: flex;
+      align-items: flex-end;
+      padding: 2rem;
+      color: white;
+    }
+
+    .left h1 {
+      font-size: 2.5rem;
+    }
+
+    .left p {
+      font-style: italic;
+      font-size: 1rem;
+    }
+
+    .right {
+      flex: 1;
+      padding: 2rem;
+      background-color: #0e1a2b;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .section-title {
+      color: #f4a300;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .label {
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+
+    .top-meta {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+      font-size: 0.85rem;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li::before {
+      content: "\2022 ";
+      color: #8fc93a;
+      margin-right: 8px;
+    }
